@@ -1,0 +1,9 @@
+alias vim=nvim
+alias rm="rm -i"
+export EDITOR=/usr/local/bin/nvim
+export DOTNET_CLI_TELEMETRY_OPTOUT=1 
+export PATH="$HOME/.Pokemon-Terminal:${PATH}"
+
+calc () {
+	bc -l <<< "$@"
+}
