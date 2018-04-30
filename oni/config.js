@@ -16,6 +16,7 @@ module.exports = {
     "ui.colorscheme": "crayon",
     "achievements.enabled": false,
     "learning.enabled": false,
+    "sidebar.enabled": false,
     "workspace.autoDetectWorkspace": "always",
     "editor.fontSize": "14px",
 }
