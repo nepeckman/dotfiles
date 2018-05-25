@@ -13,6 +13,7 @@ module.exports = {
     deactivate,
 
     "oni.loadInitVim": true,
+    "tabs.mode": "buffers",
     "ui.colorscheme": "crayon",
     "achievements.enabled": false,
     "learning.enabled": false,
