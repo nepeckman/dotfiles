@@ -14,7 +14,7 @@ module.exports = {
 
     "oni.loadInitVim": true,
     "tabs.mode": "buffers",
-    "ui.colorscheme": "crayon",
+    "ui.colorscheme": "onedark",
     "achievements.enabled": false,
     "learning.enabled": false,
     "sidebar.enabled": false,
