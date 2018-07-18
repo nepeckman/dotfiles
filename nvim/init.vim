@@ -22,7 +22,7 @@ nnoremap <C-S-tab> :bp<CR>
 nnoremap <space>fd :bd<CR>
 
 if !exists("g:gui_oni")
-    call plug#begin('~/.vim/plugged')
+    call plug#begin('~/.config/nvim/plugins')
     Plug 'junegunn/vim-easy-align'
     Plug 'tpope/vim-sensible'
     Plug 'flazz/vim-colorschemes'
@@ -31,7 +31,7 @@ if !exists("g:gui_oni")
     call plug#end()
     xmap ga <Plug>(EasyAlign)
     nmap ga <Plug>(EasyAlign)
-    colorscheme crayon
+    colorscheme onedark
 endif
 if exists("g:gui_oni")
 endif
