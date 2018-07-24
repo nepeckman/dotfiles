@@ -28,9 +28,11 @@ if !exists("g:gui_oni")
     Plug 'flazz/vim-colorschemes'
     Plug 'zah/nim.vim'
     Plug 'scrooloose/nerdtree'
+    Plug 'junegunn/goyo.vim'
     call plug#end()
     xmap ga <Plug>(EasyAlign)
     nmap ga <Plug>(EasyAlign)
+    nnoremap <space>nq :wq<CR>:q<CR>
     colorscheme onedark
 endif
 if exists("g:gui_oni")
