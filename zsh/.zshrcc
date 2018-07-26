@@ -1,5 +1,7 @@
 alias vim=nvim
+alias elixir-langserver=~/projects/tools/elixir-ls/dist/language_server.sh
 alias rm="rm -i"
+alias relaxed="relaxed --basedir /"
 export EDITOR=/usr/local/bin/nvim
 export DOTNET_CLI_TELEMETRY_OPTOUT=1 
 export PATH="$HOME/.Pokemon-Terminal:${PATH}"
