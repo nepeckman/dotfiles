@@ -19,6 +19,7 @@ module.exports = {
     "learning.enabled": false,
     "sidebar.enabled": false,
     "workspace.autoDetectWorkspace": "always",
-    "editor.fontSize": "14px",
+    "editor.fontSize": "18px",
+    "editor.fontFamily": "Hack"
 }
 

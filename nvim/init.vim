@@ -26,9 +26,8 @@ if !exists("g:gui_oni")
     Plug 'junegunn/vim-easy-align'
     Plug 'tpope/vim-sensible'
     Plug 'flazz/vim-colorschemes'
-    Plug 'zah/nim.vim'
+    Plug 'alaviss/nim.nvim'
     Plug 'scrooloose/nerdtree'
-    Plug 'zxqfl/tabnine-vim'
     Plug 'junegunn/goyo.vim'
     call plug#end()
     xmap ga <Plug>(EasyAlign)
