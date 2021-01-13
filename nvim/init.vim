@@ -28,21 +28,10 @@ if !exists("g:gui_oni")
     Plug 'zah/nim.vim'
     Plug 'scrooloose/nerdtree'
     Plug '~/.fzf'
-    Plug 'neovim/nvim-lsp'
     call plug#end()
     colorscheme softblue
 endif
-if exists("g:gui_oni")
-    call plug#begin('~/.config/nvim/plugged')
-    Plug 'flazz/vim-colorschemes'
-    Plug 'zah/nim.vim'
-    Plug 'scrooloose/nerdtree'
-    call plug#end()
-    nnoremap <C-tab> :bn<CR>
-    nnoremap <C-S-tab> :bp<CR>
-endif
 
-lua require'nvim_lsp'.nimls.setup{}
 nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
