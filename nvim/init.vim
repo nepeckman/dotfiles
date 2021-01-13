@@ -7,8 +7,8 @@ inoremap jj <esc>
 nnoremap <space>fw :w<CR>
 nnoremap <space>fq :q<CR>
 nnoremap <space>fx :wq<CR>
-nnoremap <space>cr :edit ~/.config/nvim/init.vim<CR>
-nnoremap <space>cR :mapclear<CR> :source ~/.config/nvim/init.vim<CR>
+nnoremap <space>ce :edit ~/.config/nvim/init.vim<CR>
+nnoremap <space>cr :mapclear<CR> :source ~/.config/nvim/init.vim<CR>
 map <space>pt :NERDTreeToggle<CR>
 nnoremap <space>wh <C-w>h
 nnoremap <space>wl <C-w>l
@@ -17,24 +17,39 @@ nnoremap <space>wk <C-w>k
 nnoremap <space>wd <C-w>q
 nnoremap <space>ws :split<CR>
 nnoremap <space>wv :vsplit<CR>
-nnoremap <C-tab> :bn<CR>
-nnoremap <C-S-tab> :bp<CR>
+nnoremap <C-l> :bn<CR>
+nnoremap <C-h> :bp<CR>
 nnoremap <space>fd :bd<CR>
 
+
 if !exists("g:gui_oni")
-    call plug#begin('~/.config/nvim/plugins')
-    Plug 'junegunn/vim-easy-align'
-    Plug 'tpope/vim-sensible'
+    call plug#begin('~/.config/nvim/plugged')
     Plug 'flazz/vim-colorschemes'
     Plug 'zah/nim.vim'
     Plug 'scrooloose/nerdtree'
-    Plug 'zxqfl/tabnine-vim'
-    Plug 'junegunn/goyo.vim'
+    Plug '~/.fzf'
+    Plug 'neovim/nvim-lsp'
     call plug#end()
-    xmap ga <Plug>(EasyAlign)
-    nmap ga <Plug>(EasyAlign)
-    nnoremap <space>nq :wq<CR>:q<CR>
-    colorscheme onedark
+    colorscheme softblue
 endif
 if exists("g:gui_oni")
+    call plug#begin('~/.config/nvim/plugged')
+    Plug 'flazz/vim-colorschemes'
+    Plug 'zah/nim.vim'
+    Plug 'scrooloose/nerdtree'
+    call plug#end()
+    nnoremap <C-tab> :bn<CR>
+    nnoremap <C-S-tab> :bp<CR>
 endif
+
+lua require'nvim_lsp'.nimls.setup{}
+nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
+nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
+
+nnoremap <C-p> :FZF<CR>
