@@ -98,8 +98,11 @@ source $ZSH/oh-my-zsh.sh
 alias vim=nvim
 alias oni="Onivim2-x86_64-stable.AppImage"
 alias marktext="marktext.AppImage"
+alias ti="TF_VAR_operator=$(whoami) TF_VAR_account=tele.dev TF_VAR_fn_env=tele TF_VAR_level_env=dev terragrunt init"
+alias tp="TF_VAR_operator=$(whoami) TF_VAR_account=tele.dev TF_VAR_fn_env=tele TF_VAR_level_env=dev terragrunt plan"
 export EDITOR=/usr/bin/nvim
 export DOTNET_CLI_TELEMETRY_OPTOUT=1 
+export PATH="$HOME/.local/bin:${PATH}"
 export PATH="$HOME/scripts:${PATH}"
 export PATH="$HOME/.nimble/bin:${PATH}"
 export NVM_DIR="$HOME/.nvm"
